@@ -1,7 +1,7 @@
 # Producer-Consumer System in C
 
 ## Project Overview
-This C implementation addresses the classical producer-consumer problem within a news agency framework. The system consists of multiple reporter threads (producers) that generate articles, which are then managed by a dispatcher that distributes them to co-editors using round-robin scheduling with a 5ms time quantum. Each reporter operates with their own bounded-capacity article queue.
+This C implementation addresses the classical producer-consumer problem within a news agency framework. The system consists of multiple reporter threads (producers) that generate articles, which are then managed by a dispatcher that distributes them to co-editors using round-robin scheduling. Each reporter operates with their own bounded-capacity article queue.
 
 ## Synchronization Implementation
 The project implements robust thread synchronization using:
