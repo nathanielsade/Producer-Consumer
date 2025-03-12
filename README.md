@@ -20,7 +20,8 @@ The simulation revolves around news broadcasting. Various types of stories are p
 
 ## System Design
 
-[System Design Diagram Here]
+![image](https://github.com/roini7/Producer-Consumer/assets/60584742/3b7d4e50-5d76-44e7-8d9f-f2715891339e)
+
 
 ## Running Commands
 
