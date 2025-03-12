@@ -1,4 +1,4 @@
-Copy# News Broadcasting Simulation
+# News Broadcasting Simulation
 
 This project is an implementation of a news broadcasting simulation, designed to provide experience with concurrent programming and synchronization mechanisms. The goal is to simulate the production and display of different types of news stories, while evaluating the performance impact of synchronization constructs under different loads.
 
