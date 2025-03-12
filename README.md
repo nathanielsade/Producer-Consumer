@@ -23,47 +23,51 @@ The simulation revolves around news broadcasting. Various types of stories are p
 ![image](https://github.com/roini7/Producer-Consumer/assets/60584742/3b7d4e50-5d76-44e7-8d9f-f2715891339e)
 
 
-## Instructions for Running the Project
+## Running the Project
 
-Follow these steps to compile and run the producer-consumer project:
+To run the producer-consumer project, follow these steps:
 
-1. **Compile the Code**: Use the provided `Makefile` to compile the program. In your terminal, run:
+1. Compile the code by running the provided `makefile`. Simply type the following command in your terminal:
 
-make
+   ```
+   make
+   ```
 
-markdown
-Copy
-Edit
+2. After compilation, execute the program by specifying the path to the configuration file:
 
-2. **Execute the Program**: After compilation, run the program with the path to your configuration file:
+   ```
+   ./ex3.out path
+   ```
 
-./ex3.out path
+   - Replace `path` with the actual path to your configuration file.
 
-csharp
-Copy
-Edit
+## Configuration File
 
-- Replace `path` with the actual location of your configuration file.
+The configuration file should follow this format:
 
-## Configuration File Format
+```
+<Producer ID 1>
+<Number of Articles Produced by Producer 1>
+<Queue Size for Producer 1>
 
-The configuration file should be structured as follows:
+<Producer ID 2>
+<Number of Articles Produced by Producer 2>
+<Queue Size for Producer 2>
+...
 
-<Producer ID 1> <Number of Articles Produced by Producer 1> <Queue Size for Producer 1>
+<Final Queue Size>
+```
 
-<Producer ID 2> <Number of Articles Produced by Producer 2> <Queue Size for Producer 2> ...
+- Each section represents a producer and specifies:
+  - The producer's ID.
+  - The number of articles they produce.
+  - The size of the queue available to them for storing articles.
 
-<Final Queue Size> ```
-Each section in the configuration file corresponds to a producer and contains the following:
+- The final section specifies the size of the final queue where edited articles are placed.
 
-Producer ID: The identifier of the producer.
-Articles Count: The number of articles that producer will generate.
-Queue Size: The maximum number of articles that the producer's queue can hold.
-The last section specifies the size of the final queue where co-edited articles are placed.
+### Example Configuration File Format
 
-Example Configuration File
-Copy
-Edit
+```
 1
 10
 5
@@ -77,16 +81,6 @@ Edit
 6
 
 3
-In this example:
+```
 
-There are three producers, each with its own article production count and queue size.
-The final section indicates the size of the final queue (3 in this case).
-Make sure that there are spaces between each section as shown above, as the program will parse the file based on this format.
-
-Feel free to modify the configuration file to suit your needs.
-
-Enjoy building, editing, and managing articles in this synchronized producer-consumer setup!
-
-vbnet
-Copy
-Edit
+In this example, there are three producers with their respective article production counts and queue sizes, and the final queue size is 3.
