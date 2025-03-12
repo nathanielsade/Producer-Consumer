@@ -19,6 +19,8 @@ These mechanisms prevent race conditions while enabling efficient coordination b
 5. Edited articles are placed in the final queue for output processing
 6. The main thread handles display of completed articles
 
+![image](https://github.com/roini7/Producer-Consumer/assets/60584742/3b7d4e50-5d76-44e7-8d9f-f2715891339e)
+
 ## Compiling and Executing
 To build and run the program:
 
