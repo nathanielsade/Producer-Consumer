@@ -18,52 +18,33 @@ The simulation revolves around news broadcasting. Various types of stories are p
 
 4. **Screen Manager**: The Screen Manager receives the edited messages from the Co-Editors via a shared queue and displays them on the screen (standard output). After printing all the messages and receiving three "DONE" messages, the Screen Manager displays a "DONE" statement.
 
-## Running the Project
+## System Design
 
-To run the news broadcasting simulation, follow these steps:
+[System Design Diagram Here]
 
-1. Compile the code by running the provided `makefile`. Simply type the following command in your terminal:
+## Running Commands
+
+To compile and run the program:
 make
+./ex3.out config.txt
 Copy
-2. After compilation, execute the program by specifying the path to the configuration file:
-./ex3.out path
-Copy
-* Replace `path` with the actual path to your configuration file.
-
 ## Configuration File
 
-The configuration file should follow this format:
-<Producer ID 1>
-<Number of Articles Produced by Producer 1>
-<Queue Size for Producer 1>
-<Producer ID 2>
-<Number of Articles Produced by Producer 2>
-<Queue Size for Producer 2>
-...
-<Final Queue Size>
-```
+The configuration file defines the producers and queue sizes. Each producer section includes:
+- Producer ID
+- Number of articles to produce
+- Queue size for that producer
 
-Each section represents a producer and specifies:
+The final line specifies the size of the final queue.
 
-The producer's ID.
-The number of articles they produce.
-The size of the queue available to them for storing articles.
-
-
-The final section specifies the size of the final queue where edited articles are placed.
-
-Example Configuration File Format:
-Copy1
+Example configuration:
+1
 10
 5
-
 2
 8
 4
-
 3
 12
 6
-
 3
-In this example, there are three producers with their respective article production counts and queue sizes, and the final queue size is 3.
