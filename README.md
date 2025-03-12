@@ -75,7 +75,7 @@ This example configures:
 ## Project Constraints
 - Bounded queues for reporters
 - Unbounded buffers for article types
-- Round-robin scheduling with 5ms quantum
+- Round-robin scheduling
 - Thread-safe operations throughout the pipeline
 
 The system demonstrates effective management of concurrent processes while maintaining data integrity across multiple threads.
