@@ -36,7 +36,7 @@ To run the producer-consumer project, follow these steps:
 2. After compilation, execute the program by specifying the path to the configuration file:
 
    ```
-   ./ex3.out path
+   ./ex3.out config.txt
    ```
 
    - Replace `path` with the actual path to your configuration file.
