@@ -23,29 +23,70 @@ The simulation revolves around news broadcasting. Various types of stories are p
 ![image](https://github.com/roini7/Producer-Consumer/assets/60584742/3b7d4e50-5d76-44e7-8d9f-f2715891339e)
 
 
-## Running Commands
+## Instructions for Running the Project
 
-To compile and run the program:
+Follow these steps to compile and run the producer-consumer project:
+
+1. **Compile the Code**: Use the provided `Makefile` to compile the program. In your terminal, run:
+
 make
-./ex3.out config.txt
+
+markdown
 Copy
-## Configuration File
+Edit
 
-The configuration file defines the producers and queue sizes. Each producer section includes:
-- Producer ID
-- Number of articles to produce
-- Queue size for that producer
+2. **Execute the Program**: After compilation, run the program with the path to your configuration file:
 
-The final line specifies the size of the final queue.
+./ex3.out path
 
-Example configuration:
+csharp
+Copy
+Edit
+
+- Replace `path` with the actual location of your configuration file.
+
+## Configuration File Format
+
+The configuration file should be structured as follows:
+
+<Producer ID 1> <Number of Articles Produced by Producer 1> <Queue Size for Producer 1>
+
+<Producer ID 2> <Number of Articles Produced by Producer 2> <Queue Size for Producer 2> ...
+
+<Final Queue Size> ```
+Each section in the configuration file corresponds to a producer and contains the following:
+
+Producer ID: The identifier of the producer.
+Articles Count: The number of articles that producer will generate.
+Queue Size: The maximum number of articles that the producer's queue can hold.
+The last section specifies the size of the final queue where co-edited articles are placed.
+
+Example Configuration File
+Copy
+Edit
 1
 10
 5
+
 2
 8
 4
+
 3
 12
 6
+
 3
+In this example:
+
+There are three producers, each with its own article production count and queue size.
+The final section indicates the size of the final queue (3 in this case).
+Make sure that there are spaces between each section as shown above, as the program will parse the file based on this format.
+
+Feel free to modify the configuration file to suit your needs.
+
+Enjoy building, editing, and managing articles in this synchronized producer-consumer setup!
+
+vbnet
+Copy
+Edit
